@@ -12,4 +12,3 @@ print("Key responsibilities:")
 print(f" - Extract patterns from {madlib_ant}")
 print(f" - Optimize {madlib_scia}")
 print(f" - Transform {madlib_scib} into {madlib_sciadj} material.")
-#test
