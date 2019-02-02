@@ -1,5 +1,5 @@
 # makechange2.py
-# I made version 2 first! 
+# I made version 2 first by accident! 
 
 print('This program calculates coins for making change')
 run = 1
