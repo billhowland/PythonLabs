@@ -10,17 +10,22 @@ while run:
 
 #---|TAB---------------------------------------------------------------------------------------------------------------------
 
-    nums = [5, 0, 8, 3, 4, 1, 6]
+    calc = 1
+    nums = []
     tot_l = 0
+    while calc == 1:
 
-    # loop over the elements
+        avg_in = input('Enter a number, or (d)one: ')
+        if avg_in == 'd':
+            calc = 0
+
+        else:
+            nums.append(avg_in)
+
     for num in nums:
         tot_l += int(num)
     print(tot_l / len(nums))
 
-    # loop over the indices
-    # for i in range(len(nums)):
-        # print(nums[i])
 
 #----------------------------------------------------------------------------------------------------------------------------
 

@@ -1,5 +1,5 @@
-# averages.py
-# Version 1:
+# 99-template.py
+# Version X:
 
 run = 1
 while run:
@@ -10,17 +10,7 @@ while run:
 
 #---|TAB---------------------------------------------------------------------------------------------------------------------
 
-    nums = [5, 0, 8, 3, 4, 1, 6]
-    tot_l = 0
 
-    # loop over the elements
-    for num in nums:
-        tot_l += int(num)
-    print(tot_l / len(nums))
-
-    # loop over the indices
-    # for i in range(len(nums)):
-        # print(nums[i])
 
 #----------------------------------------------------------------------------------------------------------------------------
 
