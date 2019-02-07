@@ -1,5 +1,5 @@
-# 12-guessnum1.py
-# Version 1:
+# 12-guessnum3.py
+# Version 3:
 
 import random
 guesses = 0
@@ -16,14 +16,15 @@ while run:
 
     secret_num = random.randint(1,10)
     #print (secret_num)
-    while guesses < 10:
+    while True:
         guess = int(input('Guess the number: '))
         guesses += 1
-        if guess != secret_num:
-            print('Try again!')
-            if guesses == 10:
-                print("You're out of guesses!")
-        else:
+
+        if guess < secret_num:
+            print('Too low....')
+        elif guess > secret_num:
+            print('Too high....')
+        elif guess == secret_num:
             print (('Correct! It took you') + ' ' + (str(guesses)) + ' ' + ('tries.'))
             break
 
