@@ -8,20 +8,44 @@
 # Exactly 21, advise "Blackjack!"
 # Over 21, advise "Already Busted"
 
+iters = ['first', 'second', 'third']
+valid_cards = {'2': 2, '3': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '9': 9,
+               '10': 10, 'j': 10, 'k': 10, 'q': 10, 'a': 1}
+
 
 # define functions here-------------------------------------------
 
 
-def check_palindrome(word):
-    pass
+def user_cards():
+    cards = []
+    cards_val = 0
+    for item in iters:
+        while True:
+            card = input(f"What is the {item} card? > ").strip().lower()
+            if card in valid_cards:
+                cards.append(card)
+                cards_val += int(valid_cards[card])
+                break
+    return (cards_val)
 
 
-def check_anagram(worda, wordb):
-    pass
+def advise(total):
+    hint = ()
+    if total < 17:
+        hint = 'Advise you to hit'
+    if total >= 17 and total < 21:
+        hint = 'Advise you to stay'
+    if total == 21:
+        hint = 'Blackjack! You win!'
+    if total > 21:
+        hint = 'Already Busted!'
+    return(hint)
 
 
 def main():
-    pass
+    total = (user_cards())
+    print(f"Total is {total}")
+    print(advise(total))
 
     # ----------------------------------------------------------------
 
