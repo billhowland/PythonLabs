@@ -4,7 +4,7 @@
 # define functions here--------------------------------------------------------
 
 
-def add(a, b):
+def add(a, b): #test
     return a + b
 
 # Write a comprehension to generate the first 10 powers of two:
