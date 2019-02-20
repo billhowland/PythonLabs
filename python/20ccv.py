@@ -1,21 +1,19 @@
 # 20ccv.py - Credit Card Validation
 # Version 1:
 
-iters = ['first', 'second', 'third']
-valid_cards = {'2': 2, '3': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '9': 9,
-               '10': 10, 'j': 10, 'k': 10, 'q': 10, 'a': 1}
-
 
 # define functions here-------------------------------------------
 
 
 def validate(ccv_in):
-    ccv = (list(ccv_in))
-    return (ccv)
+    ccv = [i for i in (ccv_in) if i.isdigit()]
+    check_dig = ccv.pop()
+    ccv.reverse()
+    for i in ccv:
 
 
 def main():
-    print(validate('1234'))
+    print(validate('1234 5678 9234 3456'))
 
     # ----------------------------------------------------------------
 
