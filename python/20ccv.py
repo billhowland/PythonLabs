@@ -7,13 +7,21 @@
 
 def validate(ccv_in):
     ccv = [i for i in (ccv_in) if i.isdigit()]
-    check_dig = ccv.pop()
+    check_dig = int(ccv.pop())
     ccv.reverse()
-    for i in ccv:
+    ccv = sum(int(c) for c in ''.join(str(int(x)*(2-i % 2)) for i, x in
+                                      enumerate(ccv)))
+    return check_dig == (ccv % 10)
 
 
 def main():
-    print(validate('1234 5678 9234 3456'))
+    while True:
+        vcc = input('Enter the card number: > ')
+        if vcc.isdigit():
+            print(validate(vcc))
+            break
+        else:
+            print('Invalid Entry')
 
     # ----------------------------------------------------------------
 
