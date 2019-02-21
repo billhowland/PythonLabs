@@ -1,16 +1,19 @@
-# 21wordcount.py
-# Version 1:
+# 21wordcount2.py
+# Version 2: Count how often each unique pair of words is used, then print the
+# top 10 most common pairs with their counts.
 import requests
 from string import punctuation
-word_count = {}
+pair_count = {}
 
 # define functions here-------------------------------------------
 
 
-def count_words(book):
-    for word in book:
-        word_count[word] = word_count.get((word), 0) + 1
-    return word_count
+def count_pairs(book):
+    for i in range(len(book)-1):
+        worda = book[i]
+        wordb = book[i+1]
+        pair_count[(worda, wordb)] = pair_count.get((worda, wordb), 0) + 1
+    return pair_count
 
 
 def get_book():
@@ -30,7 +33,7 @@ def top_ten(word_count):
 
 def main():
     book = get_book()
-    word_count = (count_words(book))
+    word_count = (count_pairs(book))
     print(top_ten(word_count))
 
 
