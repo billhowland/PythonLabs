@@ -1,5 +1,6 @@
 # 23contactlist.py
-# Version 2:
+# Version 2: Implement a CRUD REPL (create retrieve update delete
+# Read Eval Print Loop)
 
 # define functions here-------------------------------------------
 
