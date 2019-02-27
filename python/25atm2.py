@@ -1,5 +1,5 @@
-# 25atm.py
-# Version 1:
+# 25atm2.py
+# Version 2:
 
 
 class Acct:
@@ -30,7 +30,7 @@ class Acct:
 
 
 def main():
-    # test = Acct('Bill', 1000)
+    acct = Acct('Bill', 1000)
     # test.check_bal()
     # test.acct_with(500)
     # test.check_bal()
@@ -60,7 +60,6 @@ def main():
     print(commands)
 
     while loop:
-        print('-'*60)
         while True:
             cmd = input('> ').strip().lower()
         if cmd in valid_inputs:
@@ -73,32 +72,17 @@ def main():
             loop = False
             print('Goodbye!')
 
-        elif cmd in ['h', 'help']:
-            print(commands)
+        elif cmd.startswith('d'):  # deposit
+            acct.acct_dep(int(input('amount: ')))
 
-        elif cmd.startswith('c'):
-            contact = {}
-            for prop in props:
-                contact[prop] = input(f'{prop}: ')
-            print(create(contacts, contact))
+        elif cmd.startswith('w'):  # Withdraw
+            acct.acct_with(int(input('amount: ')))
 
-        elif cmd.startswith('r'):
-            name = input('name: ')
-            contact = read(contacts, name)
-            print_contact(contact)
+        elif cmd.startswith('c'):  # check balance
+            acct.check_bal()
 
-        elif cmd.startswith('u'):
-            name = input('name: ')
-            contact = {}
-            for prop in props:
-                val = input(f'{prop}: ')
-                if val:
-                    contact[prop] = val
-            print(update(contacts, name, contact))
-
-        elif cmd.startswith('d'):
-            name = input('name: ')
-print(delete(contacts, name))
+        elif cmd.startswith('h'):  # transacton history
+            acct.print_trans()
 
 
 # what would you like to do (deposit, withdraw, check balance, history)?
