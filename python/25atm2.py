@@ -30,13 +30,84 @@ class Acct:
 
 
 def main():
-    test = Acct('Bill', 1000)
-    test.check_bal()
-    test.acct_with(500)
-    test.check_bal()
-    test.acct_dep(2000)
-    test.check_bal()
-    test.print_trans()
+    # test = Acct('Bill', 1000)
+    # test.check_bal()
+    # test.acct_with(500)
+    # test.check_bal()
+    # test.acct_dep(2000)
+    # test.check_bal()
+    # test.print_trans()
+    loop = True
+    valid_inputs = [
+        'd', 'deposit',
+        'w', 'withdraw',
+        'c', 'check',
+        'h', 'history',
+        'x', 'exit', 'quit',
+        'h', 'help'
+    ]
+    commands = """
+        Commands:
+        (d)eposit
+        (w)ithdraw
+        (c)heck balance
+        (h)istory
+        e(x)it
+        (h)elp
+    """
+
+    print('Welcome to First Interstellar Bank')
+    print(commands)
+
+    while loop:
+        print('-'*60)
+        while True:
+            cmd = input('> ').strip().lower()
+        if cmd in valid_inputs:
+            break
+        print('Invalid input.')
+        print(commands)
+
+        if cmd in ['x', 'exit', 'quit']:
+            # save(contacts, 'contacts_out.csv')
+            loop = False
+            print('Goodbye!')
+
+        elif cmd in ['h', 'help']:
+            print(commands)
+
+        elif cmd.startswith('c'):
+            contact = {}
+            for prop in props:
+                contact[prop] = input(f'{prop}: ')
+            print(create(contacts, contact))
+
+        elif cmd.startswith('r'):
+            name = input('name: ')
+            contact = read(contacts, name)
+            print_contact(contact)
+
+        elif cmd.startswith('u'):
+            name = input('name: ')
+            contact = {}
+            for prop in props:
+                val = input(f'{prop}: ')
+                if val:
+                    contact[prop] = val
+            print(update(contacts, name, contact))
+
+        elif cmd.startswith('d'):
+            name = input('name: ')
+print(delete(contacts, name))
+
+
+# what would you like to do (deposit, withdraw, check balance, history)?
+# deposit
+# how much would you like to deposit?
+# $5
+# what would you like to do (deposit, withdraw, check balance, history)?
+# check balance
+# balance: $5
 # ----------------------------------------------------------------
 
 
