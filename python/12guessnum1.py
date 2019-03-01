@@ -8,7 +8,7 @@ guesses = 0
 run = 1
 while run:
 
-    secret_num = random.randint(1,10)
+    secret_num = random.randint(1, 10)
     # print (secret_num)
     while guesses < 10:
         guess = int(input('Guess the number: '))

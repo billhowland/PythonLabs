@@ -9,7 +9,7 @@ class Acct:
         self.trans_list = []
 
     def check_bal(self):
-        print(f'${self.bal}')
+        print(f'Account balance is: ${self.bal}')
 
     def acct_dep(self, amount):
         self.bal += amount
@@ -72,13 +72,13 @@ def main():
 
         elif cmd.startswith('d'):  # deposit
             try:
-                acct.acct_dep(int(input('amount: ')))
-                break
+                acct.acct_dep(int(input('Deposit amount: ')))
+                continue
             except ValueError:
                 print('Invalid input.')
 
         elif cmd.startswith('w'):  # Withdraw
-            acct.acct_with(int(input('amount: ')))
+            acct.acct_with(int(input('Withdrawal amount: ')))
 
         elif cmd.startswith('c'):  # check balance
             acct.check_bal()
