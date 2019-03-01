@@ -44,8 +44,7 @@ def main():
         'c', 'check',
         'h', 'history',
         'x', 'exit', 'quit',
-        'h', 'help'
-    ]
+        ]
     commands = """
         Commands:
         (d)eposit
@@ -53,7 +52,6 @@ def main():
         (c)heck balance
         (h)istory
         e(x)it
-        (h)elp
     """
 
     print('Welcome to First Interstellar Bank')
@@ -62,10 +60,10 @@ def main():
     while loop:
         while True:
             cmd = input('> ').strip().lower()
-        if cmd in valid_inputs:
-            break
-        print('Invalid input.')
-        print(commands)
+            if cmd in valid_inputs:
+                break
+            print('Invalid input.')
+            print(commands)
 
         if cmd in ['x', 'exit', 'quit']:
             # save(contacts, 'contacts_out.csv')
