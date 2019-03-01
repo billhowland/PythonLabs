@@ -1,6 +1,8 @@
 # 25atm2.py
 # Version 2:
 
+# --------------------------------------------------------------------------
+
 
 class Acct:
     def __init__(self, name, balance):
@@ -28,21 +30,17 @@ class Acct:
     def print_trans(self):
         print(self.trans_list)
 
+# --------------------------------------------------------------------------
+
 
 def main():
-    acct = Acct('Bill', 1000)
-    # test.check_bal()
-    # test.acct_with(500)
-    # test.check_bal()
-    # test.acct_dep(2000)
-    # test.check_bal()
-    # test.print_trans()
     loop = True
     valid_inputs = [
         'd', 'deposit',
         'w', 'withdraw',
         'c', 'check',
         'h', 'history',
+        'n', 'new account',
         'x', 'exit', 'quit',
         ]
     commands = """
@@ -51,10 +49,14 @@ def main():
         (w)ithdraw
         (c)heck balance
         (h)istory
+        (n)ew account
         e(x)it
     """
 
     print('Welcome to First Interstellar Bank')
+
+    acct = Acct(input('Enter account name: ').strip().lower(), 0)
+
     print(commands)
 
     while loop:
@@ -86,14 +88,9 @@ def main():
         elif cmd.startswith('h'):  # transacton history
             acct.print_trans()
 
+        elif cmd.startswith('n'):  # transacton history
+            loop = False
 
-# what would you like to do (deposit, withdraw, check balance, history)?
-# deposit
-# how much would you like to deposit?
-# $5
-# what would you like to do (deposit, withdraw, check balance, history)?
-# check balance
-# balance: $5
 # ----------------------------------------------------------------
 
 
@@ -105,9 +102,3 @@ if __name__ == '__main__':
         # --------------------------------------------------------
 
         main()
-
-# ----------------------------------------------------------------
-
-        ask = input('Quit? Y/N > ').strip().lower()
-        if ask == 'y':
-            run = 0
