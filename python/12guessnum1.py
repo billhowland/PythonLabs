@@ -3,19 +3,13 @@
 
 import random
 guesses = 0
-#define functions here-------------------------------------------------------------------------------------------------------
 
-#define()
-
-#----------------------------------------------------------------------------------------------------------------------------
 
 run = 1
 while run:
 
-#---|TAB---------------------------------------------------------------------------------------------------------------------
-
     secret_num = random.randint(1,10)
-    #print (secret_num)
+    # print (secret_num)
     while guesses < 10:
         guess = int(input('Guess the number: '))
         guesses += 1
@@ -24,11 +18,10 @@ while run:
             if guesses == 10:
                 print("You're out of guesses!")
         else:
-            print (('Correct! It took you') + ' ' + (str(guesses)) + ' ' + ('tries.'))
+            print(('Correct! It took you') + ' ' + (str(guesses)) + ' ' + ('tries.'))
             break
 
     guesses = 0
-#----------------------------------------------------------------------------------------------------------------------------
 
     ask = input('Quit? Y/N > ').strip().lower()
     if ask == 'y':

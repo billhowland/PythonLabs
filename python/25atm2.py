@@ -71,7 +71,11 @@ def main():
             print('Goodbye!')
 
         elif cmd.startswith('d'):  # deposit
-            acct.acct_dep(int(input('amount: ')))
+            try:
+                acct.acct_dep(int(input('amount: ')))
+                break
+            except ValueError:
+                print('Invalid input.')
 
         elif cmd.startswith('w'):  # Withdraw
             acct.acct_with(int(input('amount: ')))
