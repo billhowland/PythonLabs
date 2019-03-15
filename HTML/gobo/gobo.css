@@ -1,0 +1,15 @@
+body {
+  background-color: orange;
+  text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+  font-family: arial;
+  text-align: center;
+}
+
+.heading {
+  font-size: 5em;
+  border-bottom: 1px solid black;
+}
+
+.picture {
+
+}
