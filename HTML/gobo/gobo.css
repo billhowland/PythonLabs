@@ -1,15 +1,28 @@
 body {
   background-color: orange;
   text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
-  font-family: arial;
+  font-family: sans-serif;
+  font-style: normal;
   text-align: center;
+  border-left: 2px solid brown;
+  border-right: 2px solid brown;
 }
 
 .heading {
   font-size: 5em;
-  border-bottom: 1px solid black;
+  border-top: 2px solid brown;
+  border-bottom: 2px solid brown;
 }
 
 .picture {
+  float: none;
+  padding: 5px;
+  border-style: inset;
+  border-color: brown;
+  border-width: 20px;
+  margin:auto;
+}
 
+.footer {
+  border-bottom: 2px solid brown;
 }
