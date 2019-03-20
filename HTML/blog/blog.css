@@ -5,14 +5,16 @@ body {
   font-style: normal;
   color: white;
   text-align: center;
-  border-left: 2px solid white;
-  border-right: 2px solid white;
+  /* border-left: 2px solid white; */
+  /* border-right: 2px solid white; */
 }
 
 .heading {
   font-size: 5em;
   border-top: 2px solid white;
   border-bottom: 2px solid white;
+  border-left: 2px solid white;
+  border-right: 2px solid white;
 }
 
 .nav {
@@ -30,8 +32,9 @@ body {
 }
 .sect {
   display: flex;
+  flex-direction: column;
   padding: 10px;
-  font-size: 1em;
+  font-size: 1.3em;
   justify-content: center;
   border: 1px solid white;
 }
@@ -50,4 +53,23 @@ body {
   margin:auto;
   width:100%;
   max-width:600px;
+}
+.rune {
+  float: none;
+  padding: 5px;
+  border-style: inset;
+  border-color: brown;
+  border-width: 20px;
+  margin:auto;
+  width:100%;
+  max-width:80px;
+}
+.gap {
+  /* border-top: 1px solid white; */
+  /* border-bottom: 2px solid white; */
+  padding: 20px;
+}
+.container {
+  width: 40%;
+  margin: auto;
 }
