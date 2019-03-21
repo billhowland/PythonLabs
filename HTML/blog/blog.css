@@ -32,8 +32,9 @@ body {
 }
 .sect {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
-  padding: 10px;
+  padding: 20px;
   font-size: 1.3em;
   justify-content: center;
   border: 1px solid white;
@@ -61,8 +62,9 @@ body {
   border-color: brown;
   border-width: 20px;
   margin:auto;
+  margin-bottom: 20px;
   width:100%;
-  max-width:80px;
+  max-width:60px;
 }
 .gap {
   /* border-top: 1px solid white; */
@@ -70,6 +72,7 @@ body {
   padding: 20px;
 }
 .container {
-  width: 40%;
+  width: 100%;
+  max-width: 600px;
   margin: auto;
 }

@@ -25,6 +25,17 @@
 - Media Queries
 */
 
+.headerimg {
+  float: none;
+  padding: 5px;
+  border-style: inset;
+  /* border-color: brown;
+  border-width: 20px; */
+  margin:auto;
+  width:100%;
+  /* max-width:600px; */
+  /* max-height: 300px; */
+  align-items: center;
 
 /* Grid
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
