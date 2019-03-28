@@ -8,4 +8,4 @@ let cigar_party = cigars, weekend => {
   }
 }
 
-let cigar_party = cigars, weekend => (cigars >= 40 && (weekend || cigars >= 60))
+let cigar_party = (cigars, weekend) => (cigars >= 40 && (weekend || cigars >= 60))
