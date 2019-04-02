@@ -1,0 +1,51 @@
+.container {
+  display:grid;
+  grid-template-columns: repeat(4, 50px);
+  grid-template-rows: repeat (6, 40px);
+  gap: 5px;
+  grid-template-areas:
+    "display  display display   display"
+    "ac       ce      multiply  divide"
+    "seven    eight   nine      minus"
+    "four     five    six       plus"
+    "one      two     three     equal"
+    "zero     zero    decimal   equal"
+}
+
+.btn{
+  outline: solid;
+  outline-width: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#display {
+  outline: solid;
+  outline-width: 1px;
+  grid-area: ;
+}
+
+#AC {
+  grid-area: ac;
+}
+
+#CE {
+  grid-area: ce;
+}
+
+#mult {
+  grid-area: multiply;
+}
+
+#divide {
+  grid-area: divide;
+}
+
+#seven {
+  grid-area: seven;
+}
+
+#eight {
+  grid-area: eight;
+}
