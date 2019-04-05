@@ -1,17 +1,41 @@
 // 03peakvalley.js
-//
-// data = [1, 2, 3, 4, 5, 6, 7, 6, 5, 4, 5, 6, 7, 8, 9, 8, 7, 6, 7, 8, 9]
-// #  peaks at 6 and 14
-// #  valleys at 9, 17
-//
-// # define functions here-------------------------------------------
-//
-//
-// def peaks(data):  # returns indices of peaks
-//
-//     return [i for i in range(1, (len(data)-1)) if data[i] > data[i-1]
-//             and data[i] > data[i+1]]
-//
+
+data = [1, 2, 3, 4, 5, 6, 7, 6, 5, 4, 5, 6, 7, 8, 9, 8, 7, 6, 7, 8, 9]
+//  peaks at 6 and 14
+//  valleys at 9, 17
+
+// returns indices of peaks:
+
+let peaks = (data) => {
+  let pks = []
+  for (let i=1; i<data.length-1; i++){
+    if ((data[i] > data [i-1]) && (data[i] > data[i+1])){
+      pks.push(i)
+    }
+  }
+  return pks
+}
+console.log(peaks(data))
+// returns indices of valleys:
+
+let valleys = (data) => {
+  let vals = []
+  for (let i=1; i<data.length-1; i++){
+    if ((data[i] < data [i-1]) && (data[i] < data[i+1])){
+      vals.push(i)
+    }
+  }
+  return vals
+}
+console.log(valleys(data))
+// compile list of peaks and valleys in order NOT WORKING
+
+let pksnvals = (data) => {
+  return peaks(data).concat(valleys(data))
+
+
+}
+console.log(pksnvals(data))
 //
 // def valleys(data):  # returns indices of valleys
 //     return [i for i in range(1, (len(data)-1)) if data[i] < data[i-1]
