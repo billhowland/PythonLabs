@@ -27,9 +27,18 @@ body {
   align-items: center;
 }
 
-.link{
-  padding: 15px;
+a {
+  color: lightgreen;
 }
+
+a:active {
+  color: yellow;
+}
+
+a:visited {
+  color: green;
+}
+
 .sect {
   display: flex;
   flex-wrap: wrap;
@@ -41,6 +50,7 @@ body {
 }
 
 .footer {
+  padding-top:500px;
   font-size: 1em;
   border-bottom: 2px solid white;
 }
