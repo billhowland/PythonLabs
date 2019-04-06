@@ -8,7 +8,8 @@ let check_palindrome = (word) => {
   }
 }
 
-console.log(check_palindrome("word"))
+word = prompt("Word to check for palindrome: ");
+
 
 // This worked!
 // ----------------------------------------------------------------------------
@@ -17,7 +18,7 @@ let check_anagram = (worda, wordb) => {
    return ((worda.split("").sort().join("")) == (wordb.split("").sort().join("")))
 }
 
-console.log(check_anagram("word","drow"))
+prompt(check_anagram("word","drow"));
 
 // This worked!
 // ----------------------------------------------------------------------------
