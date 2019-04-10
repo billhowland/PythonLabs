@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
 body {
-  background-color: #EEEEEE;
+  background-color: black;
   font-family: 'Montserrat', sans-serif;
   display: grid;
   grid-template-rows: auto;
-  justify-items: center;
+  text-align: center;
   padding-top: 50px;
+  color: white;
 }
 
 body, html {
@@ -14,7 +15,7 @@ body, html {
 }
 
 #app {
-    width: 50%;
+    /* width: 50%; */
 }
 nav {
   padding: 20px 20px 20px 0;
