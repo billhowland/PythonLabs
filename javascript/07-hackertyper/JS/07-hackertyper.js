@@ -6,7 +6,10 @@ const getText = async () => {
   const data = await res.text()
   text = data
 }
+
 getText()
+let textdex = 0;
 document.addEventListener('keypress', (evt) => {
-  consoleDiv.innerText = text
-})
+  consoleDiv.innertext += text.charAt(textdex;
+  textdex++;
+}
