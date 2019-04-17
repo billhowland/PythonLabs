@@ -10,6 +10,7 @@ const getText = async () => {
 getText()
 let textdex = 0;
 document.addEventListener('keypress', (evt) => {
-  consoleDiv.innertext += text.charAt(textdex;
-  textdex++;
-}
+  console.log(text.charAt(textdex))
+  consoleDiv.innerText += text.substring(textdex, textdex + 10);
+  textdex+=10;
+})
