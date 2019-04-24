@@ -1,13 +1,13 @@
-{% extends 'blog/base.html' %}
+{% extends 'todo_list/base.html' %}
 
 {% block content %}
     {% for post in posts %}
         <div class="task">
             <div class="date">
-                {{ post.published_date }}
+                {{ task.created_date }}
             </div>
-            <h1><a href="{% url 'task_detail' pk=post.pk %}">{{ post.title }}</a></h1>
-            <p>{{ post.text|linebreaksbr }}</p>
+            <h1><a href="{% url 'task_detail' pk=post.pk %}">{{ task.title }}</a></h1>
+            <p>{{ task.text|linebreaksbr }}</p>
         </div>
     {% endfor %}
 {% endblock %}

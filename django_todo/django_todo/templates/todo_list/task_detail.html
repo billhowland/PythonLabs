@@ -2,9 +2,9 @@
 
 {% block content %}
     <div class="task">
-        {% if task.published_date %}
+        {% if task.created_date %}
             <div class="date">
-                {{ task.published_date }}
+                {{ task.created_date }}
             </div>
         {% endif %}
         {% if user.is_authenticated %}

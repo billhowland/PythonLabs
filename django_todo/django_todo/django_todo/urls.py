@@ -18,5 +18,6 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('todo_list.urls'))  # Note: all your app urls will start with this path
+    path('', include('todo_list.urls'))  # Note: all your app urls will start
+    # with this path
 ]
