@@ -10,7 +10,10 @@ class Task(models.Model):
     completed_date = models.DateTimeField(blank=True, null=True)
 
     def complete(self):
-        self.completed_date = timezone.now()
+        self.completed = not self.completed
+        # if self.completed:
+        #     self.completed_date = ''
+        self.save()
 
     def __str__(self):
         return self.text

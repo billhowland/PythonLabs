@@ -1,13 +1,16 @@
 {% extends 'todo_list/base.html' %}
 
 {% block content %}
-    {% for post in posts %}
+    {% for task in tasks %}
         <div class="task">
-            <div class="date">
-                {{ task.created_date }}
-            </div>
-            <h1><a href="{% url 'task_detail' pk=post.pk %}">{{ task.title }}</a></h1>
-            <p>{{ task.text|linebreaksbr }}</p>
+            <h2><a href="{% url 'task_detail' pk=task.pk %}">
+              <p class="{% if task.completed %} completed {% endif %}">{{ task.created_date }}: {{ task.text }}<span class="{% if task.completed %}
+                date {% endif %}"> Completed: {{ task.completed_date }}</span></p>
+            </a></h2>
+            {% if user.is_authenticated %}
+         <a class="btn btn-default" href="{% url 'task_complete' pk=task.pk %}"><span class="glyphicon glyphicon-check"></span></a>
+         <a class="btn btn-default" href="{% url 'task_delete' pk=task.pk %}"><span class="glyphicon glyphicon-remove-circle"></span></a>
+            {% endif %}
         </div>
     {% endfor %}
 {% endblock %}

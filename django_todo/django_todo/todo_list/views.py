@@ -31,20 +31,34 @@ def task_new(request):
             print('valid')
             task = form.save(commit=False)
             task.save()
-            return redirect('todo_list/task_detail', pk=task.pk)
+            return redirect('task_detail', pk=task.pk)
     else:
         form = TaskForm()
-    return render(request, 'todo_list/task_edit.html', {'form': form})
+    return render(request, 'todo_list/task_edit.html',
+                  {'form': form, 'command': 'New'})
 
 
 def task_edit(request, pk):
-    post = get_object_or_404(Task, pk=pk)
+    task = get_object_or_404(Task, pk=pk)
     if request.method == "POST":
-        form = TaskForm(request.POST, instance=post)
+        form = TaskForm(request.POST, instance=task)
         if form.is_valid():
-            post = form.save(commit=False)
-            post.save()
+            task = form.save(commit=False)
+            task.save()
             return redirect('task_detail', pk=form.pk)
     else:
-        form = TaskForm(instance=form)
-    return render(request, 'todo_list/task_edit.html', {'form': form})
+        form = TaskForm(instance=task)
+    return render(request, 'todo_list/task_edit.html',
+                  {'form': form, 'command': 'Edit'})
+
+
+def task_delete(request, pk):
+    task = get_object_or_404(Task, pk=pk)
+    task.delete()
+    return redirect('task_list')
+
+
+def task_complete(request, pk):
+    task = get_object_or_404(Task, pk=pk)
+    task.complete()
+    return redirect('task_list')

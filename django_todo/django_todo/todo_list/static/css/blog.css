@@ -1,14 +1,15 @@
 h1 a, h2 a {
-    color: #C25100;
+    color: #0066ff;
 }
 
 body {
     padding-left: 15px;
 }
 .page-header {
-    background-color: #C25100;
+    background-color: #0066ff;
     margin-top: 0;
     padding: 20px 20px 20px 40px;
+    text-align: center;
 }
 
 .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
@@ -22,7 +23,7 @@ body {
 }
 
 h1, h2, h3, h4 {
-    font-family: 'Lobster', cursive;
+    font-family: Avantgarde, 'TeX Gyre Adventor', 'URW Gothic L', sans-serif;
 }
 
 .date {
@@ -50,4 +51,8 @@ h1, h2, h3, h4 {
 
 .post h2 a, .post h2 a:visited {
     color: #000000;
+}
+
+.completed {
+  text-decoration-line: line-through;
 }
