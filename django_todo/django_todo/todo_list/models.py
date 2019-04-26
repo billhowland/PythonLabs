@@ -11,8 +11,10 @@ class Task(models.Model):
 
     def complete(self):
         self.completed = not self.completed
-        # if self.completed:
-        #     self.completed_date = ''
+        if self.completed:
+            self.completed_date = timezone.now()
+        else:
+            self.completed_date = None
         self.save()
 
     def __str__(self):

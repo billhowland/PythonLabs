@@ -3,8 +3,20 @@ h1 a, h2 a {
 }
 
 body {
+    background-color: black;
+    font-family: 'Montserrat', sans-serif;
+    display: grid;
+    grid-template-rows: auto;
+    text-align: left;
+    padding-top: 50px;
+    color: white;
     padding-left: 15px;
 }
+
+textarea {
+  color: black;
+}
+
 .page-header {
     background-color: #0066ff;
     margin-top: 0;
@@ -28,6 +40,8 @@ h1, h2, h3, h4 {
 
 .date {
     color: #828282;
+    text-decoration-line: none;
+    font-size: 16pt;
 }
 
 .save {
@@ -55,4 +69,9 @@ h1, h2, h3, h4 {
 
 .completed {
   text-decoration-line: line-through;
+  padding-right: 1em;
+}
+
+.glyphicon {
+  font-size: 25px;
 }

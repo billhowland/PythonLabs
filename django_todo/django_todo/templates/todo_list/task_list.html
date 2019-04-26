@@ -4,8 +4,10 @@
     {% for task in tasks %}
         <div class="task">
             <h2><a href="{% url 'task_detail' pk=task.pk %}">
-              <p class="{% if task.completed %} completed {% endif %}">{{ task.created_date }}: {{ task.text }}<span class="{% if task.completed %}
-                date {% endif %}"> Completed: {{ task.completed_date }}</span></p>
+              <p>
+                 <span class="{% if task.completed %} completed {% endif %}">{{ task.created_date }}: {{ task.text }} </span>
+                 <span class="{% if task.completed %} date {% endif %}"> {% if task.completed %} Completed: {{ task.completed_date }} {% endif %}</span>
+               </p>
             </a></h2>
             {% if user.is_authenticated %}
          <a class="btn btn-default" href="{% url 'task_complete' pk=task.pk %}"><span class="glyphicon glyphicon-check"></span></a>
