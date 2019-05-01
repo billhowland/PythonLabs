@@ -1,5 +1,5 @@
 # 14-pick6-1.py
-# Version 1:
+# Version 1
 
 import random
 
