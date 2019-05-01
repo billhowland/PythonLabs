@@ -13,7 +13,7 @@ while play == 'y':
         result = 'I Win!!'
     elif user == 'r' and x == 's' or user == 'p' and x == 'r' or user == 's' and x == 'p':
         result = 'You Win.'
-    print (result)
+    print(result)
     play = input('Play again? y/n > ')
     if play == 'n':
         print("Seeya, Chicken!!!")

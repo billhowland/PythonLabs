@@ -1,0 +1,50 @@
+Python:
+  02-Madlib - OK
+  03-Grading - OK
+  04-Magic8Ball - OK
+  05-Emoticon Generator - OK
+  06-Random Password Generator - OK v3 not done
+  07-Rock, Paper, Scissors - OK
+  08-Make Change - OK
+  09-Unit Converter - OK
+  10-Averages - OK
+  11-Calculator - OK
+  12-Guess the Number - OK
+  13-Rot-13 - OK
+  14-Pick 6 - OK
+  15-Num-to-Phrase - OK
+  17-Palindrome-Anagram tester - OK
+  18-Peaks -n- Valleys - OK
+  19-Blackjack - OK
+  20-CCV - OK
+  21-Wordcount - OK
+  23-Contact list - OK
+  25-ATM - OK
+  26-TicTacToe - OK
+  27-ConnectFour - OK
+
+HTML/CSS:
+  01-Bio - OK
+  02-Blog - OK
+  03-Company_Home (ESA) - NOT QUITE DONE
+  04-Portfolio - Not assigned (Yet)
+  05-Burrito-order-form - NOT DONE (no form)
+
+Javascript:
+  group-calculator - OK'
+  01-03-pick_3 - OK, Check 03-PeakVal
+  04-todo - OK
+  05-random_redirector - OK
+  06-Clock - NOT DONE
+  07-hackertyper - OK
+  08-bouncing_ball - NOT ASSIGNED
+  09-random_quotes - NOT ASSIGNED
+  10-any-api - NOT ASSIGNED
+  11-vue-tutorial - NOT ASSIGNED
+  12-vue-todos - NOT ASSIGNED
+
+Django:
+  01-Blog - OK
+  02-Todo - OK
+  03-URL_Shortener - NOT DONE
+  04-library - NOT ASSIGNED

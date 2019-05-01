@@ -2,6 +2,7 @@
 
 import random
 
+
 def results(pc, user):
     defeats = {
         'r': 's',
@@ -16,12 +17,13 @@ def results(pc, user):
     else:
         return "You Win!"
 
+
 play = 'y'
 while play == 'y':
 
     rps_list = ['r', 'p', 's']
     while True:
-        user = input('Choose Rock (r), Paper (p), or Scissors (s) > ').strip().lower()#.startswith()
+        user = input('Choose Rock (r), Paper (p), or Scissors (s) > ').strip().lower()  # .startswith()
         if user not in rps_list:
             print('Entry error!')
             continue

@@ -14,17 +14,16 @@ while(run):
             print('Enter positive numbers only, dude.')
 
     q = (total // 25)
-    print ((str(round(q))) + (' Quarters'))
+    print((str(round(q))) + (' Quarters'))
     remaind = total - (q * 25)
     d = (remaind // 10)
-    print ((str(round(d))) + (' Dimes'))
+    print((str(round(d))) + (' Dimes'))
     remainn = remaind - (d * 10)
     n = (remainn // 5)
-    print ((str(round(n))) + (' Nickles'))
+    print((str(round(n))) + (' Nickles'))
     remainp = remainn - (n * 5)
     p = (remainp // 1)
-    print ((str(round(p))) + (' Pennies'))
-
+    print((str(round(p))) + (' Pennies'))
 
     ask = input('Quit? Y/N > ').strip().lower()
     if ask == 'y':
