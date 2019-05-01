@@ -35,7 +35,7 @@ let pksnvals = (data) => {
 
 
 }
-console.log(pksnvals(data))
+alert(pksnvals(data))
 //
 // def valleys(data):  # returns indices of valleys
 //     return [i for i in range(1, (len(data)-1)) if data[i] < data[i-1]
