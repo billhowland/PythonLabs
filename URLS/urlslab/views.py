@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.shortcuts import redirect
-from .models import Task
-from .forms import TaskForm
+from .models import Url
+# from .forms import TaskForm
 
 # Create your views here.
 
@@ -20,4 +20,4 @@ def redirect(reg, short_url):
     redirect(url.long)
 
 
-def index(reg):
+# def index(reg):
