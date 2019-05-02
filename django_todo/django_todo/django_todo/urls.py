@@ -21,4 +21,5 @@ urlpatterns = [
     path('', include('todo_list.urls')),  # Note: all your app urls will start
     # with this path
     path('accounts/', include('django.contrib.auth.urls')),
+    path('accounts/register', views.register
 ]

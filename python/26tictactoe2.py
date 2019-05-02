@@ -1,8 +1,11 @@
+# 26tictactoe2.py
+# Version 2 of Tic Tac Toe
+
 from collections import namedtuple
-# # We can use a namedtuple instead of our Player class since we don't need to
-# # define any methods or modify the properties of Player
+
 Player = namedtuple('Player', ['name', 'token'])
 
+# instead of:
 # class Player:
 #   def __init__(self, name, token):
 #       self.name = name
@@ -112,7 +115,7 @@ if __name__ == '__main__':
                     break
 
                 except ValueError:
-                    print('Invalid move. Enter an unoccupied number between 1 and 9.')
+                    print('Please enter an unoccupied number between 1 and 9.')
 
             current_round += 1  # increment round number
 
@@ -124,7 +127,7 @@ if __name__ == '__main__':
             print(f"Winner: {winner}")
             scores[winner] += 1  # increment winner's score
         else:  # no winner: stalemate
-            print("Tie!")
+            print("Tie game.")
 
         # print scores
         print('\nScores:')

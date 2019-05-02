@@ -1,4 +1,6 @@
-# ConnectFour.py
+# 27ConnectFour.py
+# Version 1
+
 from collections import namedtuple
 
 Player = namedtuple('Player', ['name', 'color'])
@@ -35,7 +37,7 @@ class Game:
         x = position - 1
         y = 5 - self.__get_height(position)
         if y < 0:
-            raise IndexError('Error: Column full. Choose another')
+            raise IndexError('Column is full, choose another')
         self.board[y][x] = player.color
 
     def calc_winner(self):
@@ -95,7 +97,7 @@ if __name__ == '__main__':
             current_player = player2
 
         while True:
-            move = input('Enter your move: ')
+            move = input('Choose a column to drop your piece: ')
             try:
                 position = int(move)
                 if position < 1 or position > 7:
@@ -103,7 +105,7 @@ if __name__ == '__main__':
                 game.move(current_player, position)
                 break
             except ValueError:
-                print('Error: Enter a number between 1 and 7.')
+                print('Please enter a number between 1 and 7.')
             except IndexError as e:
                 print(e)
 
@@ -115,4 +117,4 @@ if __name__ == '__main__':
     if winner:
         print(f'{winner} wins!')
     else:
-        print("You're all losers!")
+        print("No winner this time.")
