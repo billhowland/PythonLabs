@@ -1,12 +1,27 @@
 from .models import Task
-from django.utils import timezone
 from django.shortcuts import render, get_object_or_404
 from .forms import TaskForm
 from django.shortcuts import redirect
+from django.http import HttpResponseForbidden
 from django.contrib.auth.decorators import login_required
 
 # def task_list(request):
 #     return HttpResponse('ok')
+
+# Custom decorator
+
+
+def login_test(func):
+    def check_and_call(request, *args, **kwargs):
+        # user = request.user
+        # print user.id
+        pk = kwargs["pk"]
+        task = Task.objects.get(pk=pk)
+        if (task.user != request.user):
+            return HttpResponseForbidden()
+        return func(request, *args, **kwargs)
+    return check_and_call
+
 
 # Create your views here.
 
@@ -42,7 +57,7 @@ def task_new(request):
                   {'form': form, 'command': 'New'})
 
 
-@login_required
+@login_test
 def task_edit(request, pk):
     task = get_object_or_404(Task, pk=pk)
     if request.method == "POST":
@@ -57,14 +72,14 @@ def task_edit(request, pk):
                   {'form': form, 'command': 'Edit'})
 
 
-@login_required
+@login_test
 def task_delete(request, pk):
     task = get_object_or_404(Task, pk=pk)
     task.delete()
     return redirect('task_list')
 
 
-@login_required
+@login_test
 def task_complete(request, pk):
     task = get_object_or_404(Task, pk=pk)
     task.complete()
