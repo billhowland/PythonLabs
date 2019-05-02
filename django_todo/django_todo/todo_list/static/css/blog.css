@@ -13,7 +13,7 @@ body {
     padding-left: 15px;
 }
 
-textarea {
+input, textarea {
   color: black;
 }
 

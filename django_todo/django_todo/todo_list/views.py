@@ -13,7 +13,7 @@ from django.contrib.auth.decorators import login_required
 
 def task_list(request):
     if request.user.is_authenticated:
-        tasks = Task.objects.filter(user=request.user, created_date__lte=timezone.now()).order_by('_date')
+        tasks = Task.objects.filter(user=request.user).order_by('created_date')
     else:
         tasks = []
     return render(request, 'todo_list/task_list.html', {'tasks': tasks})
