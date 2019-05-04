@@ -8,3 +8,4 @@ function myClock() {
 }
 
 alert(myClock)
+/media/bill/ServalData/PDX-Code-Guild/Jan-2019-Night/javascript/06-clock/JS

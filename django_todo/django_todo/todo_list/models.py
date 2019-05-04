@@ -9,7 +9,6 @@ class Task(models.Model):
     completed = models.BooleanField(default=False)
     created_date = models.DateTimeField(default=timezone.now)
     completed_date = models.DateTimeField(blank=True, null=True)
-    task_list = models.Foreignkey()
 
     def complete(self):
         self.completed = not self.completed
