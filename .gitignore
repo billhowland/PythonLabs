@@ -103,6 +103,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+URLSqueezer/
 
 # Spyder project settings
 .spyderproject
@@ -121,4 +122,3 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
- 
