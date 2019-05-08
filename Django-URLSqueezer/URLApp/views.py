@@ -12,7 +12,7 @@ def urls_base(request):
         shrink = Shrink()
         shrink.long_url = request.POST.get('input_url')
 
-        short_temp_url = 'jhdslfs'
+        short_temp_url = shorten_alg()
         shrink.short_url = short_temp_url
         shrink.save()
 
@@ -24,5 +24,16 @@ def urls_base(request):
     return render(request, 'URLApp/urls_base.html')
 
 
-# def shorten_alg():
+def shorten_alg():
     # given a long, return a short
+    import random
+    seed = ('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*?')
+    a = 0
+    rand_url = ''
+
+    while a < 10:
+        seed_var = random.choice(seed)
+        rand_url += seed_var
+        a += 1
+        continue
+    return(rand_url)
