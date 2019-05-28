@@ -5,7 +5,7 @@ Python:
   03-Grading - OK
   04-Magic8Ball - OK
   05-Emoticon Generator - OK
-  06-Random Password Generator - OK v3 not done
+  06-Random Password Generator - OK
   07-Rock, Paper, Scissors - OK
   08-Make Change - OK
   09-Unit Converter - OK
@@ -30,29 +30,25 @@ HTML/CSS:
   02-Blog - OK
   03-Company_Home (ESA) - NOT QUITE DONE
   04-Portfolio - Not assigned (Yet)
-  05-Burrito-order-form - NOT QUITE DONE
+  05-Burrito-order-form - NO LONGER REQUIRED/NOT QUITE DONE
 
 Javascript:
   group-calculator - OK
   01-03-pick_3 - all three OK
   04-todo - OK
   05-random_redirector - OK
-  06-Clock - NOT DONE
+  06-Clock - NOT REQUIRED
   07-hackertyper - OK
   08-bouncing_ball - NOT ASSIGNED
-  09-random_quotes - NOT ASSIGNED
-  10-any-api - NOT ASSIGNED
-  11-vue-tutorial - NOT ASSIGNED
-  12-vue-todos - NOT ASSIGNED
+  09-random_quotes - ASSIGNED OR 10 OR API in Capstone
+  10-any-api - ASSIGNED OR 9 OR API in Capstone
+
 
 Django:
   01-Blog - OK
   02-Todo - OK
   03-URL_Shortener - OK
-  04-library - NOT STARTED
+  04-library - NOT REQUIRED
 
 Delinquent items:
   HTML-03-Company_Home - Not complete (but looks cool)
-  HTML-05-Burrito-order-form - NOT DONE (no form)
-  JS-06-Clock - NOT DONE
-  
